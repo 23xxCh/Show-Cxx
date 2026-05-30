@@ -1,21 +1,56 @@
 [
   {
-    "id": "typescript-tips",
-    "title": "TypeScript 实用技巧",
-    "date": "2026-05-29",
+    "id": "ai-agent-toolchain",
+    "title": "AI Agent开发工具链",
+    "date": "2026-05-28",
     "tags": [
-      "typescript",
-      "技巧"
+      "AI Agent",
+      "工具链",
+      "开发环境"
     ],
     "published": true
   },
   {
-    "id": "react-hooks",
-    "title": "React Hooks 速查",
-    "date": "2026-05-28",
+    "id": "spc-quickref",
+    "title": "SPC统计过程控制速查",
+    "date": "2026-05-26",
     "tags": [
-      "react",
-      "hooks"
+      "SPC",
+      "质量控制",
+      "统计分析"
+    ],
+    "published": true
+  },
+  {
+    "id": "xgboost-feature-engineering",
+    "title": "XGBoost特征工程与调参笔记",
+    "date": "2026-05-25",
+    "tags": [
+      "XGBoost",
+      "特征工程",
+      "机器学习"
+    ],
+    "published": true
+  },
+  {
+    "id": "yolov8-deployment",
+    "title": "YOLOv8工业部署备忘",
+    "date": "2026-05-22",
+    "tags": [
+      "YOLOv8",
+      "机器视觉",
+      "部署"
+    ],
+    "published": true
+  },
+  {
+    "id": "langchain-quickref",
+    "title": "LangChain核心概念速查",
+    "date": "2026-05-20",
+    "tags": [
+      "LangChain",
+      "AI Agent",
+      "速查"
     ],
     "published": true
   }
