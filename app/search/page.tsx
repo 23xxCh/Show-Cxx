@@ -1,17 +1,15 @@
-import { Metadata } from 'next'
+'use client'
+
+import { useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
-import { globalSearch } from '@/lib/search'
-
-export const metadata: Metadata = {
-  title: '搜索',
-  description: '搜索博客、笔记、作品集',
-}
-
-interface SearchPageProps {
-  searchParams: Promise<{ q?: string }>
-}
+import { projects } from '@/data/projects'
+import postsData from '@/content/blog/posts.json'
+import notesData from '@/content/notes/notes.json'
+import type { BlogPostPreview } from '@/types/post'
+import type { NotePreview } from '@/lib/notes'
 
 const typeLabels: Record<string, string> = {
   blog: '博客',
@@ -19,10 +17,56 @@ const typeLabels: Record<string, string> = {
   project: '作品集',
 }
 
-export default async function SearchPage({ searchParams }: SearchPageProps) {
-  const { q } = await searchParams
-  const query = q || ''
-  const results = query ? globalSearch(query) : []
+interface SearchResult {
+  type: 'blog' | 'note' | 'project'
+  title: string
+  excerpt: string
+  url: string
+}
+
+function clientSearch(query: string): SearchResult[] {
+  const results: SearchResult[] = []
+  const q = query.toLowerCase()
+
+  // 搜索博客
+  for (const post of postsData as BlogPostPreview[]) {
+    if (
+      post.title.toLowerCase().includes(q) ||
+      post.excerpt.toLowerCase().includes(q) ||
+      post.tags.some((t) => t.toLowerCase().includes(q))
+    ) {
+      results.push({ type: 'blog', title: post.title, excerpt: post.excerpt, url: `/blog/${post.slug}` })
+    }
+  }
+
+  // 搜索笔记
+  for (const note of notesData as NotePreview[]) {
+    if (
+      note.title.toLowerCase().includes(q) ||
+      note.tags.some((t) => t.toLowerCase().includes(q))
+    ) {
+      results.push({ type: 'note', title: note.title, excerpt: note.tags.join(', '), url: `/notes/${note.id}` })
+    }
+  }
+
+  // 搜索作品集
+  for (const project of projects) {
+    if (
+      project.title.toLowerCase().includes(q) ||
+      project.description.toLowerCase().includes(q) ||
+      project.techStack.some((t) => t.toLowerCase().includes(q))
+    ) {
+      results.push({ type: 'project', title: project.title, excerpt: project.description, url: '/portfolio' })
+    }
+  }
+
+  return results
+}
+
+function SearchContent() {
+  const searchParams = useSearchParams()
+  const query = searchParams.get('q') || ''
+  const results = query ? clientSearch(query) : []
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -68,5 +112,13 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         </p>
       ) : null}
     </div>
+  )
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<div className="container mx-auto px-4 py-8">加载中...</div>}>
+      <SearchContent />
+    </Suspense>
   )
 }

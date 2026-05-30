@@ -1,32 +1,34 @@
-import { Metadata } from 'next'
+'use client'
+
+import { useSearchParams } from 'next/navigation'
+import { Suspense } from 'react'
 import { PostCard } from '@/components/PostCard'
 import { TagFilter } from '@/components/TagFilter'
 import { Pagination } from '@/components/Pagination'
-import { getAllPosts } from '@/lib/posts'
+import type { BlogPostPreview } from '@/types/post'
 
-export const metadata: Metadata = {
-  title: '博客',
-  description: '技术文章、学习笔记、项目经验分享',
-}
+// 构建时生成的静态数据
+import postsData from '@/content/blog/posts.json'
 
-interface BlogPageProps {
-  searchParams: Promise<{ tag?: string; page?: string }>
-}
+const allPosts: BlogPostPreview[] = postsData as BlogPostPreview[]
+const allTags = [...new Set(allPosts.flatMap((post) => post.tags))]
 
-export default async function BlogPage({ searchParams }: BlogPageProps) {
-  const { tag, page } = await searchParams
-  const currentPage = parseInt(page || '1', 10)
+function BlogContent() {
+  const searchParams = useSearchParams()
+  const tag = searchParams.get('tag') || undefined
+  const page = parseInt(searchParams.get('page') || '1', 10)
   const perPage = 6
 
-  const { posts, total, tags } = getAllPosts({
-    tag,
-    page: currentPage,
-    perPage,
-  })
+  let filteredPosts = allPosts
+  if (tag) {
+    filteredPosts = allPosts.filter((p) => p.tags.includes(tag))
+  }
 
+  const total = filteredPosts.length
   const totalPages = Math.ceil(total / perPage)
+  const start = (page - 1) * perPage
+  const posts = filteredPosts.slice(start, start + perPage)
 
-  // 构建用于分页组件的 searchParams 字符串
   const paginationSearchParams = tag ? `tag=${tag}` : ''
 
   return (
@@ -36,12 +38,10 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         记录技术学习、分享项目经验
       </p>
 
-      {/* 标签筛选 */}
       <div className="mb-8">
-        <TagFilter tags={tags} currentTag={tag} />
+        <TagFilter tags={allTags} currentTag={tag} />
       </div>
 
-      {/* 文章列表 */}
       {posts.length > 0 ? (
         <>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8">
@@ -50,9 +50,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             ))}
           </div>
 
-          {/* 分页 */}
           <Pagination
-            currentPage={currentPage}
+            currentPage={page}
             totalPages={totalPages}
             baseUrl="/blog"
             searchParams={paginationSearchParams}
@@ -64,5 +63,13 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
         </p>
       )}
     </div>
+  )
+}
+
+export default function BlogPage() {
+  return (
+    <Suspense fallback={<div className="container mx-auto px-4 py-8">加载中...</div>}>
+      <BlogContent />
+    </Suspense>
   )
 }

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "typescript-tips",
+    "title": "TypeScript 实用技巧",
+    "date": "2026-05-29",
+    "tags": [
+      "typescript",
+      "技巧"
+    ],
+    "published": true
+  },
+  {
+    "id": "react-hooks",
+    "title": "React Hooks 速查",
+    "date": "2026-05-28",
+    "tags": [
+      "react",
+      "hooks"
+    ],
+    "published": true
+  }
+]

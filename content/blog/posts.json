@@ -1,0 +1,39 @@
+[
+  {
+    "slug": "project-intro",
+    "title": "个人全栈创作空间：技术选型与设计思路",
+    "date": "2026-05-30",
+    "excerpt": "用 Next.js + TypeScript 构建一个集博客、笔记、作品集、简历于一体的全栈项目，记录从零到一的过程。",
+    "tags": [
+      "nextjs",
+      "typescript",
+      "全栈"
+    ],
+    "coverImage": "/images/project-intro.jpg",
+    "published": true
+  },
+  {
+    "slug": "typescript-basics",
+    "title": "TypeScript 入门：从 interface 到泛型",
+    "date": "2026-05-28",
+    "excerpt": "TypeScript 的核心概念梳理，包括接口、类型别名、泛型、工具类型等，配合实际代码示例。",
+    "tags": [
+      "typescript",
+      "入门",
+      "教程"
+    ],
+    "coverImage": "/images/typescript-basics.jpg",
+    "published": true
+  },
+  {
+    "slug": "why-nextjs",
+    "title": "为什么我选择 Next.js",
+    "date": "2026-05-25",
+    "excerpt": "在众多前端框架中，为什么 Next.js 是全栈项目的最佳选择？",
+    "tags": [
+      "nextjs",
+      "框架"
+    ],
+    "published": true
+  }
+]

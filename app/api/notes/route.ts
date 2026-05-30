@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import type { ApiResponse } from '@/types/api'
 
+export const dynamic = 'force-static'
+
 // 笔记创建/更新的验证 Schema
 // 学习点：Zod 推断类型，与 TypeScript 类型同步
 const noteSchema = z.object({
