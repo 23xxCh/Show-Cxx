@@ -37,11 +37,13 @@ export const resumeData: ResumeData = {
   location: '汕头 / 东莞 / 广州 / 深圳',
   summary: '汕头大学智能制造工程专业学生，2027年毕业。具备扎实的机械设计与AI开发能力，熟练使用SolidWorks/CREO进行结构设计，有丰富的AI Agent开发经验和ROS2机器人项目实践。挑战杯广东省一等奖获得者，自驱力强，善于跨领域协作。',
   skills: {
-    '机械设计': ['SolidWorks', 'CREO', 'UG建模', 'AutoCAD', 'Moldex模流分析'],
-    'AI / 编程': ['Python', 'Claude Code', 'Codex', 'AI Agent开发', '机器学习', '机器视觉'],
+    'AI / 大模型': ['Python', 'LangChain', 'RAG', 'AI Agent开发', 'Prompt Engineering', 'LLM API', '多Agent协作'],
+    '机器视觉': ['YOLOv8', 'OpenCV', '缺陷检测', '图像处理', 'MiniMax LLM'],
+    '工业数据': ['XGBoost', 'Prophet', '时序分析', 'SPC质量控制', 'OEE监控', 'OR-Tools排产'],
     '机器人 / 嵌入式': ['ROS2', 'ESP32', '嵌入式开发', 'PLC（博途）'],
-    '仿真 / 分析': ['MATLAB', '信号与系统', '数据分析与建模'],
-    '其他': ['Office办公软件', '英语四级（462分）', 'PCB画板（嘉立创）', '伏图软件'],
+    '机械设计': ['SolidWorks', 'CREO', 'UG建模', 'AutoCAD', 'Moldex模流分析'],
+    '全栈开发': ['Next.js', 'TypeScript', 'FastAPI', 'Docker', 'K8s', 'PostgreSQL'],
+    '其他': ['Claude Code', 'MATLAB', 'Office办公软件', '英语四级（462分）', 'PCB画板（嘉立创）'],
   },
   workExperiences: [
     {
