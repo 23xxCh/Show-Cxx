@@ -41,6 +41,20 @@
     "published": true
   },
   {
+    "slug": "vibe-coding-production-gap",
+    "title": "同样是 Vibe Coding，为什么有人能做出生产级系统，有人只能停在 Demo",
+    "date": "2026-06-07",
+    "excerpt": "AI 把写代码的门槛拉低了，但把项目做成生产级系统的门槛并没有同步消失。真正拉开差距的，是问题定义、系统判断、质量约束和持续交付能力。",
+    "tags": [
+      "Vibe Coding",
+      "AI开发",
+      "工程能力",
+      "系统思考",
+      "竞争力"
+    ],
+    "published": true
+  },
+  {
     "slug": "orchestrator-agent-for-multi-agent-dev",
     "title": "从多智能体协作到统筹智能体：我为什么开始关注项目总控 Agent",
     "date": "2026-06-06",

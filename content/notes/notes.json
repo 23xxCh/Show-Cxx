@@ -11,6 +11,54 @@
     "published": true
   },
   {
+    "id": "ai-job-tiering-notes",
+    "title": "AI岗位分层投递判断：算法实习、制造业AI应用与工业AI工程",
+    "date": "2026-06-07",
+    "tags": [
+      "岗位分析",
+      "AI工程师",
+      "智能制造",
+      "求职策略"
+    ],
+    "published": true
+  },
+  {
+    "id": "ai-ml-dl-learning-roadmap",
+    "title": "人工智能、机器学习、深度学习是什么，以及怎么学",
+    "date": "2026-06-07",
+    "tags": [
+      "人工智能",
+      "机器学习",
+      "深度学习",
+      "学习路线"
+    ],
+    "published": true
+  },
+  {
+    "id": "embodied-ai-internship-gap-notes",
+    "title": "具身智能实习岗位拆解与补强备忘",
+    "date": "2026-06-07",
+    "tags": [
+      "具身智能",
+      "岗位分析",
+      "机器人",
+      "学习规划"
+    ],
+    "published": true
+  },
+  {
+    "id": "embodied-llm-sim-platform-notes",
+    "title": "具身智能多智能体仿真平台岗位拆解",
+    "date": "2026-06-07",
+    "tags": [
+      "具身智能",
+      "多智能体",
+      "Isaac Sim",
+      "岗位分析"
+    ],
+    "published": true
+  },
+  {
     "id": "orchestrator-agent-framework",
     "title": "统筹型 Agent 设计框架",
     "date": "2026-06-06",
