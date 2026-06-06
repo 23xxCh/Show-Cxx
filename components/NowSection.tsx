@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, useReducedMotion, type Variants } from 'motion/react'
+import { Bot, Cpu, ScanSearch } from 'lucide-react'
 
 function buildVariants(reduced: boolean) {
   const container: Variants = {
@@ -10,72 +11,87 @@ function buildVariants(reduced: boolean) {
       transition: { staggerChildren: 0.08, delayChildren: 0.1 },
     },
   }
+
   const item: Variants = reduced
     ? { hidden: { opacity: 1 }, show: { opacity: 1 } }
     : {
-        hidden: { opacity: 0, y: 8 },
+        hidden: { opacity: 0, y: 10 },
         show: {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
+          transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
         },
       }
+
   return { container, item }
 }
+
+const tracks = [
+  {
+    title: '工业 AI Agent 主线',
+    desc: '对应 AI 应用工程师、前沿部署工程师方向，重点是工业知识助手与任务执行原型。',
+    icon: Bot,
+  },
+  {
+    title: 'ROS2 与移动机器人',
+    desc: '对应 ROS 开发工程师方向，重点是导航、路径规划和传感器集成。',
+    icon: Cpu,
+  },
+  {
+    title: '工业视觉与检测',
+    desc: '对应智能制造、机械结构相关岗位，重点是检测场景与工程表达。',
+    icon: ScanSearch,
+  },
+]
 
 export function NowSection() {
   const reduced = useReducedMotion() ?? false
   const { container, item } = buildVariants(reduced)
 
   return (
-    <section className="py-10">
+    <section className="py-10 md:py-12">
       <motion.div
         initial="hidden"
         animate="show"
         variants={container}
-        className="rounded-xl border bg-accent-soft p-6 sm:p-8"
+        className="grid gap-4 lg:grid-cols-[0.72fr_1.28fr]"
       >
-        <motion.h2
+        <motion.div
           variants={item}
-          className="text-2xl font-bold tracking-tight mb-4"
+          className="rounded-[1.8rem] border border-border/70 bg-foreground px-6 py-6 text-background shadow-[0_24px_80px_rgba(34,30,24,0.16)]"
         >
-          目前在做
-        </motion.h2>
-
-        <motion.div variants={item} className="space-y-3 text-sm leading-relaxed">
-          <div className="flex items-start gap-3">
-            <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent" />
-            <div>
-              <span className="font-medium">工业 AI Agent 方向</span>
-              <span className="text-muted-foreground">，继续用 LangChain + RAG 搭建工业知识助手，补足多 Agent 协作和 Tool Use 经验。</span>
-            </div>
+          <div className="text-[11px] tracking-[0.08em] text-background/60">
+            当前项目方向
           </div>
-          <div className="flex items-start gap-3">
-            <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent" />
-            <div>
-              <span className="font-medium">ROS2 机器人项目</span>
-              <span className="text-muted-foreground">，围绕小车导航、路径规划和传感器集成继续打磨实战能力。</span>
-            </div>
-          </div>
-          <div className="flex items-start gap-3">
-            <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-accent" />
-            <div>
-              <span className="font-medium">工业视觉探索</span>
-              <span className="text-muted-foreground">，把 YOLOv8 缺陷检测和 MiniMax LLM 报告生成继续做成更完整的原型。</span>
-            </div>
-          </div>
+          <h2 className="balanced-headline mt-4 text-3xl font-semibold leading-[1.02] tracking-[-0.05em] sm:text-4xl">
+            目前的项目实践
+            <br />
+            主要对应三类岗位。
+          </h2>
+          <p className="mt-4 max-w-md text-sm leading-7 text-background/72">
+            方便招聘方快速判断岗位匹配度，我把项目集中在工业 AI、机器人和工业视觉三个方向。
+          </p>
         </motion.div>
 
         <motion.div
           variants={item}
-          className="mt-5 pt-4 border-t border-foreground/8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-muted-foreground"
+          className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3"
         >
-          <span className="inline-flex items-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
-            寻找实习 / 项目机会
-          </span>
-          <span>工业 AI · 智能制造 · 机器人方向</span>
-          <span>2027 届 · 汕头大学</span>
+          {tracks.map(({ title, desc, icon: Icon }, index) => (
+            <motion.div
+              key={title}
+              variants={item}
+              className={`soft-panel rounded-[1.6rem] border border-border/70 p-5 shadow-[0_20px_60px_rgba(30,28,24,0.07)] ${
+                index === 1 ? 'sm:translate-y-6' : ''
+              } ${index === 2 ? 'xl:-translate-y-4' : ''}`}
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-border/70 bg-background/75">
+                <Icon className="h-5 w-5 text-accent" />
+              </div>
+              <h3 className="mt-5 text-lg font-semibold leading-7">{title}</h3>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">{desc}</p>
+            </motion.div>
+          ))}
         </motion.div>
       </motion.div>
     </section>

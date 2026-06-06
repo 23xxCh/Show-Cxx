@@ -1,8 +1,8 @@
 ---
-title: "从零构建工业AI Agent：OpenClaw的设计与实现"
+title: "OpenClaw工业AI Agent项目设计与实现"
 date: "2026-05-20"
-excerpt: "详解OpenClaw工业AI Agent的架构设计：LangChain编排、RAG知识检索、多Agent协作、Tool Use机制。"
-tags: ["AI Agent", "LangChain", "RAG", "多Agent", "工业应用"]
+excerpt: "围绕工业知识检索与任务执行场景，完成AI Agent系统设计，包含RAG、工具调用和多智能体协作。"
+tags: ["工业AI", "LangChain", "RAG", "多智能体系统", "工业应用"]
 published: true
 ---
 

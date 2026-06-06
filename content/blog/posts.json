@@ -1,35 +1,35 @@
 [
   {
     "slug": "ai-job-skill-map",
-    "title": "分析43个AI岗位JD后，我画了一张能力图谱",
+    "title": "AI相关岗位能力要求分析：基于43份岗位JD的整理",
     "date": "2026-05-29",
-    "excerpt": "系统分析43个AI相关岗位的JD，提炼出AI Agent开发、工业AI、机器视觉三条路线的能力要求。",
+    "excerpt": "基于43份AI相关岗位JD，整理AI应用、工业AI和机器视觉方向的核心能力要求。",
     "tags": [
-      "职业规划",
+      "岗位分析",
       "AI工程师",
       "求职",
-      "技能分析"
+      "技能要求"
     ],
     "published": true
   },
   {
     "slug": "multi-agent-debate",
-    "title": "多智能体辩论系统：让AI自己说服自己",
+    "title": "多智能体协作方案设计：面向复杂问题分析的系统实践",
     "date": "2026-05-27",
-    "excerpt": "设计一个让多个AI智能体围绕议题进行观点交锋的系统：架构设计、Prompt策略、辩论规则。",
+    "excerpt": "围绕复杂问题分析场景，设计多智能体协作系统，涵盖角色分工、提示策略和流程控制。",
     "tags": [
-      "多Agent",
+      "多智能体系统",
       "LLM",
-      "Prompt Engineering",
+      "提示词设计",
       "系统设计"
     ],
     "published": true
   },
   {
     "slug": "xgboost-rul-prediction",
-    "title": "XGBoost预测设备剩余使用寿命：一个8.9分的工业项目",
+    "title": "基于XGBoost的设备剩余寿命预测项目实践",
     "date": "2026-05-25",
-    "excerpt": "智能装备健康管理系统的技术拆解：从传感器时序数据到RUL预测，从XGBoost模型到数字孪生看板。",
+    "excerpt": "围绕预测性维护场景，完成设备时序数据建模、剩余寿命预测和数字孪生看板展示。",
     "tags": [
       "预测性维护",
       "XGBoost",
@@ -41,41 +41,41 @@
   },
   {
     "slug": "yolo-fabric-defect-detection",
-    "title": "YOLOv8布面缺陷检测：从实验室到工厂的200米",
+    "title": "基于YOLOv8的布面缺陷检测项目实践",
     "date": "2026-05-22",
-    "excerpt": "为汕头祥发网厂构建布面缺陷检测系统：数据采集、模型训练、实时推理、LLM报告生成。",
+    "excerpt": "面向布面质检场景，完成数据采集、模型训练、实时检测与结果报告生成。",
     "tags": [
       "机器视觉",
       "YOLOv8",
       "缺陷检测",
-      "工业落地",
+      "工业质检",
       "OpenCV"
     ],
     "published": true
   },
   {
     "slug": "openclaw-industrial-agent",
-    "title": "从零构建工业AI Agent：OpenClaw的设计与实现",
+    "title": "OpenClaw工业AI Agent项目设计与实现",
     "date": "2026-05-20",
-    "excerpt": "详解OpenClaw工业AI Agent的架构设计：LangChain编排、RAG知识检索、多Agent协作、Tool Use机制。",
+    "excerpt": "围绕工业知识检索与任务执行场景，完成AI Agent系统设计，包含RAG、工具调用和多智能体协作。",
     "tags": [
-      "AI Agent",
+      "工业AI",
       "LangChain",
       "RAG",
-      "多Agent",
+      "多智能体系统",
       "工业应用"
     ],
     "published": true
   },
   {
     "slug": "valuable-skills",
-    "title": "真正有价值的东西：不会过期的能力",
+    "title": "智能制造方向学习与项目能力总结",
     "date": "2026-05-15",
-    "excerpt": "学本质不学表面，学思维不学工具。作为2027届智能制造学生，我如何定义'不会过期的能力'。",
+    "excerpt": "结合课程、竞赛和项目实践，梳理智能制造方向长期有效的几类核心能力。",
     "tags": [
-      "思考",
       "职业规划",
-      "学习方法"
+      "学习方法",
+      "能力总结"
     ],
     "published": true
   }

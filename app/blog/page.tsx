@@ -33,7 +33,7 @@ function BlogContent() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-2">博客</h1>
       <p className="text-muted-foreground mb-6">
-        记录技术学习、项目复盘与求职思考。
+        补充展示项目背景、技术方案与岗位相关思考。
       </p>
 
       <div className="mb-8">

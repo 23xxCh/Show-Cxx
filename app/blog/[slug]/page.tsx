@@ -48,7 +48,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <div className="container mx-auto px-4 py-8">
       <Button nativeButton={false} variant="ghost" render={<Link href="/blog" />} className="mb-6">
         <ArrowLeft className="mr-2 h-4 w-4" />
-        返回博客列表
+        返回文章列表
       </Button>
 
       <div className="flex gap-8">
@@ -83,10 +83,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           <nav className="mt-12 pt-8 border-t flex justify-between gap-4">
             {prevPost ? (
-              <Link
-                href={`/blog/${prevPost.slug}`}
-                className="group flex-1 min-w-0"
-              >
+              <Link href={`/blog/${prevPost.slug}`} className="group flex-1 min-w-0">
                 <p className="text-sm text-muted-foreground flex items-center">
                   <ChevronLeft className="h-4 w-4 mr-1" />
                   上一篇
@@ -99,10 +96,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="flex-1" />
             )}
             {nextPost ? (
-              <Link
-                href={`/blog/${nextPost.slug}`}
-                className="group flex-1 min-w-0 text-right"
-              >
+              <Link href={`/blog/${nextPost.slug}`} className="group flex-1 min-w-0 text-right">
                 <p className="text-sm text-muted-foreground flex items-center justify-end">
                   下一篇
                   <ChevronRight className="h-4 w-4 ml-1" />

@@ -23,6 +23,7 @@ export function ThemeToggle() {
     <Button
       variant="ghost"
       size="icon"
+      className="rounded-full"
       onClick={cycleTheme}
       aria-label={label}
     >
