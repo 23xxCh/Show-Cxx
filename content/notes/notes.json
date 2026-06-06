@@ -1,5 +1,38 @@
 [
   {
+    "id": "ai-first-app-checklist",
+    "title": "AI First 应用设计检查清单",
+    "date": "2026-06-07",
+    "tags": [
+      "AI First",
+      "产品设计",
+      "检查清单"
+    ],
+    "published": true
+  },
+  {
+    "id": "orchestrator-agent-framework",
+    "title": "统筹型 Agent 设计框架",
+    "date": "2026-06-06",
+    "tags": [
+      "AI Agent",
+      "多智能体系统",
+      "系统设计"
+    ],
+    "published": true
+  },
+  {
+    "id": "industrial-ai-constraint-notes",
+    "title": "工业 AI 落地约束备忘",
+    "date": "2026-06-05",
+    "tags": [
+      "工业AI",
+      "智能制造",
+      "落地约束"
+    ],
+    "published": true
+  },
+  {
     "id": "ai-agent-toolchain",
     "title": "AI Agent开发工具链",
     "date": "2026-05-28",

@@ -1,5 +1,58 @@
 [
   {
+    "slug": "agent-framework-selection-thinking",
+    "title": "AI智能体开发框架选型思考：LangChain、LangGraph、AgentScope 2.0、CrewAI 与 AutoGen",
+    "date": "2026-06-07",
+    "excerpt": "从项目落地视角比较主流 AI 智能体开发框架，重点关注工作流控制、多人协作、可观测性与工程可维护性。",
+    "tags": [
+      "AI Agent",
+      "框架选型",
+      "LangGraph",
+      "AgentScope",
+      "系统设计"
+    ],
+    "published": true
+  },
+  {
+    "slug": "ai-first-app-understanding-cost",
+    "title": "AI First 应用的关键问题：生成效率提升后，理解成本成了新的瓶颈",
+    "date": "2026-06-07",
+    "excerpt": "在 AI First 应用中，真正变贵的不是生成，而是理解、校验、吸收和交接 AI 产出的成本。",
+    "tags": [
+      "AI First",
+      "产品思考",
+      "理解成本",
+      "沟通成本"
+    ],
+    "published": true
+  },
+  {
+    "slug": "orchestrator-agent-for-multi-agent-dev",
+    "title": "从多智能体协作到统筹智能体：我为什么开始关注项目总控 Agent",
+    "date": "2026-06-06",
+    "excerpt": "当多个智能体一起参与开发时，真正缺的往往不是执行者，而是能统一目标、整理上下文和压缩沟通成本的统筹智能体。",
+    "tags": [
+      "多智能体系统",
+      "AI Agent",
+      "项目协作",
+      "系统设计"
+    ],
+    "published": true
+  },
+  {
+    "slug": "industrial-ai-uncertainty-vs-determinism",
+    "title": "工业 AI 落地的关键矛盾：AI 的不确定性与生产确定性的冲突",
+    "date": "2026-06-05",
+    "excerpt": "工业场景要求稳定、可追责、可验证，但 AI 天然带有概率性和不确定性，这种矛盾正是很多工业 AI 应用落地的堵点。",
+    "tags": [
+      "工业AI",
+      "智能制造",
+      "AI落地",
+      "系统思考"
+    ],
+    "published": true
+  },
+  {
     "slug": "ai-job-skill-map",
     "title": "AI相关岗位能力要求分析：基于43份岗位JD的整理",
     "date": "2026-05-29",
