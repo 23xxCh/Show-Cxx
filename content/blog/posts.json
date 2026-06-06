@@ -27,6 +27,20 @@
     "published": true
   },
   {
+    "slug": "fde-future-and-ai-learning",
+    "title": "FDE工程师的未来发展，与AI时代更有效的学习方法",
+    "date": "2026-06-07",
+    "excerpt": "从业务落地视角理解 FDE 工程师的价值，并总结 AI 时代更重要的学习方法：快速实践、结构化复盘和持续压缩理解成本。",
+    "tags": [
+      "FDE",
+      "前沿部署",
+      "学习方法",
+      "AI时代",
+      "职业发展"
+    ],
+    "published": true
+  },
+  {
     "slug": "orchestrator-agent-for-multi-agent-dev",
     "title": "从多智能体协作到统筹智能体：我为什么开始关注项目总控 Agent",
     "date": "2026-06-06",
