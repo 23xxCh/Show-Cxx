@@ -6,7 +6,7 @@ import { getAllNotes } from '@/lib/notes'
 
 export const metadata: Metadata = {
   title: '笔记',
-  description: '碎片知识记录，公开的数字花园',
+  description: '碎片知识记录，公开的个人数字花园。',
 }
 
 export default function NotesPage() {
@@ -16,7 +16,7 @@ export default function NotesPage() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-2">笔记</h1>
       <p className="text-muted-foreground mb-8">
-        碎片知识记录，类似公开的数字花园
+        碎片知识记录，类似公开的数字花园。
       </p>
 
       {notes.length > 0 ? (

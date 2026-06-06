@@ -55,12 +55,10 @@ export function Header() {
         </nav>
 
         <div className="flex items-center ml-auto space-x-2">
-          {/* 搜索按钮 */}
           <Button variant="ghost" size="icon" render={<Link href="/search" />} nativeButton={false}>
             <Search className="h-5 w-5" />
           </Button>
           <ThemeToggle />
-          {/* 移动端汉堡菜单 */}
           <div className="flex md:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger render={<Button variant="ghost" size="icon" />}>

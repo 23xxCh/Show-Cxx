@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button'
 import { Construction } from 'lucide-react'
 
 interface PlaceholderPageProps {
-  title: string         // 页面标题
-  description: string   // 页面描述
+  title: string
+  description: string
 }
 
 export function PlaceholderPage({ title, description }: PlaceholderPageProps) {

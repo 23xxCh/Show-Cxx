@@ -6,8 +6,6 @@ import { PostCard } from '@/components/PostCard'
 import { TagFilter } from '@/components/TagFilter'
 import { Pagination } from '@/components/Pagination'
 import type { BlogPostPreview } from '@/types/post'
-
-// 构建时生成的静态数据
 import postsData from '@/content/blog/posts.json'
 
 const allPosts: BlogPostPreview[] = postsData as BlogPostPreview[]
@@ -21,7 +19,7 @@ function BlogContent() {
 
   let filteredPosts = allPosts
   if (tag) {
-    filteredPosts = allPosts.filter((p) => p.tags.includes(tag))
+    filteredPosts = allPosts.filter((post) => post.tags.includes(tag))
   }
 
   const total = filteredPosts.length
@@ -35,7 +33,7 @@ function BlogContent() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-2">博客</h1>
       <p className="text-muted-foreground mb-6">
-        记录技术学习、分享项目经验
+        记录技术学习、项目复盘与求职思考。
       </p>
 
       <div className="mb-8">
@@ -59,7 +57,7 @@ function BlogContent() {
         </>
       ) : (
         <p className="text-center text-muted-foreground py-12">
-          {tag ? `没有标签为 "${tag}" 的文章` : '暂无文章'}
+          {tag ? `没有标签“${tag}”的文章` : '暂无文章'}
         </p>
       )}
     </div>

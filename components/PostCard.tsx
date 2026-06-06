@@ -11,7 +11,6 @@ interface PostCardProps {
 export function PostCard({ post }: PostCardProps) {
   return (
     <Card className="overflow-hidden hover:shadow-md transition-shadow">
-      {/* 封面图（如果有） */}
       {post.coverImage && (
         <Link href={`/blog/${post.slug}`}>
           <div className="relative aspect-video w-full overflow-hidden">
@@ -27,7 +26,7 @@ export function PostCard({ post }: PostCardProps) {
       )}
       <CardHeader className="pb-2">
         <h3 className="text-lg font-semibold line-clamp-2">
-          <Link href={`/blog/${post.slug}`} className="hover:text-blue-600 transition-colors">
+          <Link href={`/blog/${post.slug}`} className="hover:text-accent transition-colors">
             {post.title}
           </Link>
         </h3>
@@ -47,7 +46,7 @@ export function PostCard({ post }: PostCardProps) {
           <div className="flex flex-wrap gap-1.5">
             {post.tags.map((tag) => (
               <Link key={tag} href={`/blog?tag=${tag}`}>
-                <Badge variant="secondary" className="text-xs hover:bg-blue-100 transition-colors">
+                <Badge variant="secondary" className="text-xs hover:bg-accent-soft transition-colors">
                   {tag}
                 </Badge>
               </Link>
