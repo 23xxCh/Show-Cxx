@@ -1,5 +1,19 @@
 [
   {
+    "slug": "industrial-llm-and-agent-manufacturing-base",
+    "title": "当工业大模型遇见 AI Agent：多智能体协作如何重塑制造业的智能化底座",
+    "date": "2026-06-08",
+    "excerpt": "从制造业落地视角理解工业大模型与 AI Agent 的结合，重点关注多智能体协作为什么会成为未来工厂的重要智能底座。",
+    "tags": [
+      "工业AI",
+      "AI Agent",
+      "多智能体系统",
+      "智能制造",
+      "系统设计"
+    ],
+    "published": true
+  },
+  {
     "slug": "agent-framework-selection-thinking",
     "title": "AI智能体开发框架选型思考：LangChain、LangGraph、AgentScope 2.0、CrewAI 与 AutoGen",
     "date": "2026-06-07",
