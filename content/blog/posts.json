@@ -1,5 +1,19 @@
 [
   {
+    "slug": "platform-agent-vs-business-agent",
+    "title": "通用 Agent 会被大厂吃掉，但业务型 Agent 还没结束",
+    "date": "2026-06-09",
+    "excerpt": "当 Lovart、星流这类平台越来越强，我越来越在意的不是还能不能做一个类似 Agent，而是如果通用能力被覆盖，自己究竟还剩下什么。",
+    "tags": [
+      "AI Agent",
+      "产品思考",
+      "业务落地",
+      "平台竞争",
+      "个人思考"
+    ],
+    "published": true
+  },
+  {
     "slug": "industrial-llm-and-agent-manufacturing-base",
     "title": "当工业大模型遇见 AI Agent：多智能体协作如何重塑制造业的智能化底座",
     "date": "2026-06-08",
